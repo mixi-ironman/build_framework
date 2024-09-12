@@ -70,7 +70,6 @@ class Student {
     }
 
     public function update($id, $name, $age, $photo = null) {
-        // Xây dựng câu lệnh SQL cập nhật
         $query = 'UPDATE ' . $this->table . ' SET name = :name, age = :age';
     
         // Thêm điều kiện cập nhật ảnh nếu có
@@ -93,7 +92,6 @@ class Student {
         
         $stmt->bindParam(':id', $id);
         
-        // Thực thi câu lệnh
         return $stmt->execute();
     }
     

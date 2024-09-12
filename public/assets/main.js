@@ -32,7 +32,6 @@ function viewDetailStudent(event) {
     });
 }
 
-// Gán sự kiện click cho các phần tử có class 'modal_detail-student'
 $(document).on('click', '.modal_detail-student', viewDetailStudent);
 
 //Toast Mess

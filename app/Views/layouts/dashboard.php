@@ -64,6 +64,15 @@
             <span class="nav-link-text ms-1">Sinh viên</span>
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link_ nav-link" href="/build_fw/public/product/index">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Sản phẩm</span>
+          </a>
+        </li>
       </ul>
     </div>
   </aside>

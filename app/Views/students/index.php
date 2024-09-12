@@ -34,8 +34,8 @@
                 <tr>
                     <td class="text-center" style="vertical-align: middle;"><?php echo $key?></td>
                     <td class="text-center" style="vertical-align: middle;">
-                        <a href="<?php echo BASE_PATH; ?>student/show/<?php echo $student->id; ?>" class="modal_detail-student"
-                            studentId="<?php echo $student->id; ?>"
+                        <a href="<?php echo BASE_PATH; ?>student/show/<?php echo $student->id; ?>"
+                            class="modal_detail-student" studentId="<?php echo $student->id; ?>"
                             style="cursor : pointer"><?php echo $student->name; ?></a></td>
                     <td class="text-center" style="vertical-align: middle;">
                         <img src="<?php echo BASE_PATH; ?><?php echo $student->photo;?>" alt="Ảnh sinh viên"
@@ -55,7 +55,8 @@
                             <ul class="dropdown-menu">
                                 <!-- href="<?php echo BASE_PATH; ?>student/edit/<?php echo $student->id; ?>" -->
                                 <li><a class="dropdown-item text-center btn-modal_edit"
-                                        href="<?php echo BASE_PATH; ?>student/edit/<?php echo $student->id; ?>">Edit</a></li>
+                                        href="<?php echo BASE_PATH; ?>student/edit/<?php echo $student->id; ?>">Edit</a>
+                                </li>
                                 <li><a class="dropdown-item text-center btn-modal_edit"
                                         href="<?php echo BASE_PATH; ?>student/delete/<?php echo $student->id; ?>"
                                         onclick="return confirm('Bạn có chắc muốn xóa?')">Delete</a></li>
@@ -104,7 +105,7 @@
         <div class="content-toast-wrap">
             <div class="card edit-student">
                 <!-- <div class="card-header" style ="display:flex; align-items: center;"> -->
-                <div style ="width:100%; display:flex; align-items: center;justify-content: space-between;">
+                <div style="width:100%; display:flex; align-items: center;justify-content: space-between;">
                     <h5 class="card-title">Thông tin sinh viên</h5>
                     <p class="close-edit" style="cursor : pointer; font-size: 18px;"><i class="fa-solid fa-x"></i></p>
                 </div>

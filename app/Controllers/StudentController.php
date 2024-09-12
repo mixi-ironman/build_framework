@@ -7,14 +7,11 @@ use App\Models\Student;
 
 
 class StudentController extends Controller {
-    private $site_path; 
     private $student;
 
     public function __construct() {
-        global $site_path; 
-        $this->site_path = $site_path;
         $this->student = new Student(); 
-
+        
     }
     
     public function index($page = 1) {
@@ -24,11 +21,11 @@ class StudentController extends Controller {
         $totalPage = $studentModel->getTotalPage(); //tổng số trang
         $students = $studentModel->getAllStudents($page);
 
-        $this->view('students/index', ['students' => $students, 'site_path' => $this->site_path, 'totalPage' => $totalPage, 'page' => $page]);
+        $this->view('students/index', ['students' => $students, 'totalPage' => $totalPage, 'page' => $page]);
     }
 
     public function create() {
-        $this->view('students/create', ['site_path' => $this->site_path]);
+        $this->view('students/create');
     }
 
     public function store() {
@@ -103,7 +100,7 @@ class StudentController extends Controller {
         $studentModel = $this->student;
         $studentModel->create($name, $age, $photo);
     
-        header('Location: ' . $this->site_path . 'student/index');
+        header('Location: ' .BASE_PATH. 'student/index');
     }
 
     public function show($studentId =null){
@@ -127,7 +124,7 @@ class StudentController extends Controller {
         $studentModel = $this->student;
         $student = $studentModel->getById($id);
 
-        $this->view('students/edit', ['student' => $student, 'site_path' => $this->site_path]);
+        $this->view('students/edit', ['student' => $student]);
 
     }
 
@@ -217,7 +214,7 @@ class StudentController extends Controller {
             $studentModel->update($id, $name, $age);
         }
     
-        header('Location: ' . $this->site_path . 'student/index');
+        header('Location: ' . BASE_PATH . 'student/index');
     }
     
     public function delete($id) {
@@ -229,6 +226,6 @@ class StudentController extends Controller {
             'type' => 'success'
         ];
 
-        header('Location: '.$this->site_path.'student/index');
+        header('Location: '. BASE_PATH .'student/index');
     }
 }

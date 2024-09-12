@@ -13,5 +13,8 @@
             "name": "Nam"
         }
     ],
-    "require": {}
+    "require": {
+        "illuminate/database": "^10.48",
+        "rakit/validation": "^1.4"
+    }
 }
